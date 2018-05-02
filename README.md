@@ -5,8 +5,8 @@ Usage:
 
 Launch the project and go to localhost:5000, then pass the URL of the (PNG prefered) logo without http://
 
-http://localhost:5000/image/corecolor/upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Google_2015_logo.svg/2000px-Google_2015_logo.svg.png
+http://localhost:5000/image/corecolor/img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RE1Mu3b?ver=5c31
 
 Result:
 
-![Result](/sample1.png)
+![Result](https://user-images.githubusercontent.com/4982103/39532366-fe0b05fa-4e2c-11e8-92b4-ef60fff96c4e.png)
