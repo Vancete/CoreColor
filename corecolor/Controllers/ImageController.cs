@@ -25,7 +25,7 @@ namespace corecolor.Controllers
         [HttpGet("[action]/{*url}")]
         public async Task<IActionResult> CoreColor(string url) {
 
-            if(url.Substring(0, 4) != "http"){
+            if (url.Substring(0, 4) != "http") {
                 url = "http://" + url;
             }
 
@@ -45,12 +45,9 @@ namespace corecolor.Controllers
                     string pixel9 = sourceImage[x+1, y-1].ToHex();
                     if (pixel5 == pixel1 && pixel5 == pixel2 && pixel5 == pixel3 && pixel5 == pixel4 && pixel5 == pixel6 && pixel5 == pixel7 && pixel5 == pixel8 && pixel5 == pixel9) {
                         int value;
-                        if (colors.TryGetValue(pixel5, out value))
-                        {
+                        if (colors.TryGetValue(pixel5, out value)) {
                             colors[pixel5] += 1;
-                        }
-                        else 
-                        {
+                        } else {
                             colors[pixel5] = 1;
                         }
                     }
@@ -60,15 +57,13 @@ namespace corecolor.Controllers
             Image<Rgba32> img = new Image<Rgba32>(325, 1000);
             MemoryStream output = new MemoryStream();
 
-            using (img)
-            {
+            using (img) {
                 int n = 0;
                 var font = SystemFonts.CreateFont("Consolas", 16, FontStyle.Regular);
 
-                foreach (KeyValuePair<string, int> entry in colors)
-                {
+                foreach (KeyValuePair<string, int> entry in colors) {
                     img.Mutate(x => {
-                        if(Rgba32.FromHex(entry.Key).A > 0.9f){
+                        if (Rgba32.FromHex(entry.Key).A > 0.9f) {
                             x.Fill(Rgba32.FromHex(entry.Key), new Rectangle(200, 25*n, 50, 25));
                             x.DrawText("#" + entry.Key.Substring(0,6), font, Rgba32.White, new PointF(257, 25*n-1));
                             n++;
@@ -77,11 +72,11 @@ namespace corecolor.Controllers
                 }
 
                 int imageSize = 25 * n + 20;
-                if(imageSize < 120){ imageSize = 120; }
+                if (imageSize < 120) { imageSize = 120; }
 
                 font = SystemFonts.CreateFont("Consolas", 14, FontStyle.Regular);
 
-                using(sourceImage){
+                using (sourceImage) {
                     sourceImage.Mutate(x => x.Resize(190, 0));
                     img.Mutate(x => {
                         x.BackgroundColor(Rgba32.FromHex("62727b"));
@@ -105,17 +100,13 @@ namespace corecolor.Controllers
         {
             Image<Rgba32> image = null;
 
-            try
-            {
+            try {
                 HttpClient httpClient = new HttpClient();
                 HttpResponseMessage response = await httpClient.GetAsync(url);
                 Stream inputStream = await response.Content.ReadAsStreamAsync();
 
                 image = Image.Load(inputStream);
-            }
-
-            catch
-            {
+            } catch {
                 
             }
 
