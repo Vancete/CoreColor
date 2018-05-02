@@ -1,0 +1,10 @@
+D:\Users\ivserran\Downloads\CoreTest\corecolor\corecolor\bin\Debug\netcoreapp2.0\corecolor.deps.json
+D:\Users\ivserran\Downloads\CoreTest\corecolor\corecolor\bin\Debug\netcoreapp2.0\corecolor.runtimeconfig.json
+D:\Users\ivserran\Downloads\CoreTest\corecolor\corecolor\bin\Debug\netcoreapp2.0\corecolor.runtimeconfig.dev.json
+D:\Users\ivserran\Downloads\CoreTest\corecolor\corecolor\bin\Debug\netcoreapp2.0\corecolor.dll
+D:\Users\ivserran\Downloads\CoreTest\corecolor\corecolor\bin\Debug\netcoreapp2.0\corecolor.pdb
+D:\Users\ivserran\Downloads\CoreTest\corecolor\corecolor\obj\Debug\netcoreapp2.0\corecolor.csproj.CoreCompileInputs.cache
+D:\Users\ivserran\Downloads\CoreTest\corecolor\corecolor\obj\Debug\netcoreapp2.0\corecolor.AssemblyInfoInputs.cache
+D:\Users\ivserran\Downloads\CoreTest\corecolor\corecolor\obj\Debug\netcoreapp2.0\corecolor.AssemblyInfo.cs
+D:\Users\ivserran\Downloads\CoreTest\corecolor\corecolor\obj\Debug\netcoreapp2.0\corecolor.dll
+D:\Users\ivserran\Downloads\CoreTest\corecolor\corecolor\obj\Debug\netcoreapp2.0\corecolor.pdb
